@@ -30,7 +30,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install .
-          pytest -rfE --cov=one -s --tb=native -v --cov-report xml --cov-report term-missing:skip-covered --cov-append one
+          pytest -rfE --cov=one -s --tb=native -v --cov-report xml --cov-report term-missing:skip-covered one
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
