@@ -1,3 +1,3 @@
-import one
+from one import stuff
 def test_foobar():
-    one.foobar()
+    stuff.foobar()
