@@ -29,7 +29,7 @@ jobs:
       - name: Run tests
         run: |
           pip install -r requirements.txt
-          pip install .
+          pip install -e .
           pytest -rfE --cov=two -s --tb=native -v --cov-report xml --cov-report term-missing:skip-covered two
 
       - name: Upload coverage to Codecov
