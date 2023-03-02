@@ -1,0 +1,38 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
+        threshold: 30%
+flag_management:
+  default_rules: # the rules that will be followed for any flag added, generally
+    carryforward: true # needed for monorepos: total coverage is not uploaded at every commit.
+    statuses:
+      - type: project
+        target: auto
+        threshold: 1%
+      - type: patch
+        target: 30%
+  individual_flags:
+    - name: one
+      paths:
+        - one/**
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 30%
+    - name: two
+      paths:
+        - two/**
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 30%
