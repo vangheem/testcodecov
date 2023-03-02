@@ -11,7 +11,7 @@ on:
       - "two/**"
 
 jobs:
-  pre-checks:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,7 +30,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install .
-          pytest -rfE --cov=two -s --tb=native -v --cov-report xml --cov-append two
+          pytest -rfE --cov=two -s --tb=native -v --cov-report xml --cov-report term-missing:skip-covered --cov-append two
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
