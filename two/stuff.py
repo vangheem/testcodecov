@@ -11,5 +11,4 @@ def foobar3():
 
 
 def foobar4():
-
     print("foobar4")
