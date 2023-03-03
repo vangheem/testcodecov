@@ -4,3 +4,6 @@ def test_foobar():
 
 def test_foobar2():
     stuff.foobar2()
+
+def test_foobar3():
+    stuff.foobar3()
