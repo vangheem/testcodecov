@@ -12,3 +12,7 @@ def foobar3():
 
 def foobar4():
     print("foobar4")
+
+
+def foobar5():
+    print("foobar5")
